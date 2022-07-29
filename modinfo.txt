@@ -1,0 +1,3 @@
+name = New Agent: Valkyrie
+author = Momo
+version = 1.0.0
