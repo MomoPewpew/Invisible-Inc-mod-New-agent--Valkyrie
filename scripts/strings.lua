@@ -9,7 +9,7 @@ local MOD_STRINGS =
 	{
 		VALKYRIE =
 		{
-			NAME = "",
+			NAME = "Valkyrie",
 			FILE = "",
 			YEARS_OF_SERVICE = "",
 			AGE = "",
