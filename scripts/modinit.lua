@@ -33,6 +33,7 @@ local function load( modApi, options, params, mod_options )
    end
 
 	modApi:addAbilityDef( "strict_surveillance", scriptPath .."/strict_surveillance" )
+	modApi:addAbilityDef( "throw_camera_launcher", scriptPath .."/throw_camera_launcher" )
 end
 
 return
