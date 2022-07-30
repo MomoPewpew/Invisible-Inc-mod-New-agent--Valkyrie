@@ -21,7 +21,7 @@ local tool_templates =
 		name =  STRINGS.MOD_VALKYRIE.ITEMS.ITEM_CAMERA_LAUNCHER,
 		desc =  STRINGS.MOD_VALKYRIE.ITEMS.ITEM_CAMERA_LAUNCHER_DESC,
 		flavor = STRINGS.MOD_VALKYRIE.ITEMS.ITEM_CAMERA_LAUNCHER_FLAV,
-		icon = "itemrigs/FloorProp_Bandages.png",
+		--icon = "itemrigs/FloorProp_Heavy_Pistol.png",
 		profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_Sticky_Cam_small.png",	
 		profile_icon_100 = "gui/icons/item_icons/icon-item_Sticky_Cam.png",
 		kanim = "kanim_stickycam",
@@ -46,6 +46,7 @@ local tool_templates =
 	item_blackeye_camera = util.extend( commondefs.item_template )
 	{
 		type = "simgrenade",
+		--icon = "itemrigs/FloorProp_MotionDetector.png",
 		name =  STRINGS.MOD_VALKYRIE.ITEMS.ITEM_BLACKEYE,
 		desc =  STRINGS.MOD_VALKYRIE.ITEMS.ITEM_BLACKEYE_DESC,
 		profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_Sticky_Cam_small.png",	
