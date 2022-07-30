@@ -62,7 +62,7 @@ local agent_templates =
 		sounds = VALKYRIE_SOUNDS ,
 		speech = STRINGS.MOD_VALKYRIE.AGENTS.VALKYRIE.BANTER,
 		blurb = STRINGS.MOD_VALKYRIE.AGENTS.VALKYRIE.ALT_1.BIO,
-		upgrades = { "augment_subdermal_pda","item_revolver_deckard" },
+		upgrades = { "valkyrie_augment_strict_surveillance","item_dartgun","item_camera_launcher"},
 	},
 }
 

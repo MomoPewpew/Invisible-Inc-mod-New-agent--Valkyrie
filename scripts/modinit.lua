@@ -27,6 +27,11 @@ local function load( modApi, options, params, mod_options )
        end
    end
 
+	local itemdefs = include( scriptPath .. "/itemdefs" )
+	for name, itemDef in pairs(itemdefs) do
+		modApi:addItemDef( name, itemDef )
+   end
+
 end
 
 return
