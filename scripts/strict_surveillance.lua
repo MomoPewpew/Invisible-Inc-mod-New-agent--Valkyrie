@@ -71,7 +71,7 @@ local strict_surveillance =
 	end,
 	
 	onTrigger = function( self, sim, evType, evData )
-		if self.abilityOwner and evData and evData:isPC() then
+		if self.abilityOwner and evData and evData:isPC() and not self.abilityOwner:isKO() then
             userUnit = self.abilityOwner:getUnitOwner()
 			local x0,y0 = userUnit:getLocation()
 			if x0 and y0 then
