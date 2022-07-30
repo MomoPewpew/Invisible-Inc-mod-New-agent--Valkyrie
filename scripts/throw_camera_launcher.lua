@@ -162,8 +162,12 @@ local throw_camera_launcher =
 
 				assert( player )
 				newUnit:setPlayerOwner(player)
-				newUnit:getTraits().hasHearing = true
-				newUnit:getTraits().doAutoMarking = true
+				
+				if userUnit:countAugments( "valkyrie_augment_strict_surveillance" ) > 0 then
+					newUnit:getTraits().hasHearing = true
+					newUnit:getTraits().doAutoMarking = true
+				end
+				
 				sim:spawnUnit( newUnit )
 				
 				sim:dispatchEvent( simdefs.EV_UNIT_THROW, { unit = userUnit, x1=x1, y1=y1, facing=facing } )
