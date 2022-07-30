@@ -152,6 +152,7 @@ local throw_camera_launcher =
 			end
 
 			if userUnit:isValid() and not userUnit:getTraits().interrupted then
+				sim:dispatchEvent( simdefs.EV_UNIT_THROW, { unit = userUnit, x1=x1, y1=y1, facing=facing } )
 
 				local newUnit = nil
 				local player = userUnit:getPlayerOwner()
@@ -163,14 +164,14 @@ local throw_camera_launcher =
 				assert( player )
 				newUnit:setPlayerOwner(player)
 				
+				sim:dispatchEvent( simdefs.EV_UNIT_THROWN, { unit = newUnit, x=x1, y1 } )
+				
 				if userUnit:countAugments( "valkyrie_augment_strict_surveillance" ) > 0 then
 					newUnit:getTraits().hasHearing = true
 					newUnit:getTraits().doAutoMarking = true
 				end
 				
 				sim:spawnUnit( newUnit )
-				
-				sim:dispatchEvent( simdefs.EV_UNIT_THROW, { unit = userUnit, x1=x1, y1=y1, facing=facing } )
 
 				if x0 ~= targetCell.x or y0 ~= targetCell.y then
 					sim:warpUnit(newUnit, sim:getCell(x1, y1))
