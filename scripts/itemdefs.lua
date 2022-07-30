@@ -54,6 +54,7 @@ local tool_templates =
 		abilities = {},
 		traits = {
 			camera=true,
+			laptop=true,
 			LOSarc = math.pi * 2,
 			disposable= true,
 			mainframe_icon_on_deploy=true,
