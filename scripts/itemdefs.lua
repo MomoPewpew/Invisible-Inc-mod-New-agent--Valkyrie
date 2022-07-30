@@ -55,7 +55,11 @@ local tool_templates =
 		traits = {
 			camera=true,
 			LOSarc = math.pi * 2,
-			disposable= false,
+			disposable= true,
+			mainframe_icon_on_deploy=true,
+			mainframe_status = "active",
+			sightable = true,
+			hidesInCover = true,
 			agent_filter=true,
 		},
 		sounds = {activate="SpySociety/Grenades/stickycam_deploy", bounce="SpySociety/Grenades/bounce"},
