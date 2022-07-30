@@ -32,6 +32,7 @@ local function load( modApi, options, params, mod_options )
 		modApi:addItemDef( name, itemDef )
    end
 
+	modApi:addAbilityDef( "strict_surveillance", scriptPath .."/strict_surveillance" )
 end
 
 return

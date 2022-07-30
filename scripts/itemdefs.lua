@@ -12,6 +12,7 @@ local tool_templates =
 		traits = util.extend( commondefs.DEFAULT_AUGMENT_TRAITS ){
 			installed = true,
 		},
+		abilities = util.tconcat( commondefs.augment_template.abilities, { "strict_surveillance" }),
 		profile_icon = "gui/icons/skills_icons/skills_icon_small/icon-item_augment_shalem_small.png",
     	profile_icon_100 = "gui/icons/skills_icons/icon-item_augment_shalem.png",
 	},
