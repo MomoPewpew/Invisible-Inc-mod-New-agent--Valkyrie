@@ -14,12 +14,6 @@ local itemdefs = include("sim/unitdefs/itemdefs")
 local guarddefs = include("sim/unitdefs/guarddefs")
 local propdefs = include("sim/unitdefs/propdefs")
 
-
-
-
-
-
-
 -------------------------------------------------------------
 -- Stolen from cloak tooltip for showing range - may work with later
 
@@ -70,10 +64,6 @@ local throw_camera_launcher =
 		createToolTip = function( self,sim,unit,targetCell)
 			return abilityutil.formatToolTip( STRINGS.ABILITIES.THROW,  STRINGS.ABILITIES.THROW_DESC, 1 )
 		end,
-		
-		--onTooltip = function( self, hud, sim, abilityOwner, abilityUser )
-		--	return camera_launcher_throw_tooltip( hud, abilityUser, abilityOwner:getTraits().range, self, sim, abilityOwner, STRINGS.ABILITIES.CLOAK_DESC )
-		--end,
 	
 		profile_icon = "gui/icons/action_icons/Action_icon_Small/icon-item_shoot_small.png",
 		usesAction = true,
@@ -162,74 +152,43 @@ local throw_camera_launcher =
 			end
 
 			if userUnit:isValid() and not userUnit:getTraits().interrupted then
-			
-			--sim:removeTrigger( simdefs.TRG_UNIT_WARP, self )
-			
-			--[==[------------
-			local player = sim:getPC()
-			sim:forEachUnit(
-					function ( existingMines )
-						local x1, y1 = existingMines:getLocation()
-						if x1 and y1 and existingMines:getTraits().isWidowMine then
-							mineUnitID = existingMines:getID()				
-							sim:warpUnit(existingMines, nil)
-							sim:despawnUnit( existingMines )
-							player:glimpseUnit(sim, mineUnitID)
-							sim:removeTrigger( simdefs.TRG_UNIT_WARP, self)
-						end
-					end
-				)
-			]==]------------
-			
-				--sim:dispatchEvent( simdefs.EV_UNIT_START_SHOOTING, { unitID = userUnit:getID(), newFacing = newFacing, oldFacing = oldFacing, overwatch = true, targetUnitID = targetUnit:getID() } )
-				sim:dispatchEvent( simdefs.EV_UNIT_THROW, { unit = userUnit, x1=x1, y1=y1, facing=facing } )
-				--sim:dispatchEvent( simdefs.EV_UNIT_STOP_SHOOTING, { unitID = userUnit:getID(), facing=facing } )	
-				
 
 				local newUnit = nil
 				local player = userUnit:getPlayerOwner()
 
 				newUnit = simfactory.createUnit( itemdefs.item_blackeye_camera, sim )
-				newUnit:setPlayerOwner( player )
-	
-				-- Spawn and warp the new unit
+
+				local x0, y0 = userUnit:getLocation()
+
+				assert( player )
+				newUnit:setPlayerOwner(player)
 				sim:spawnUnit( newUnit )
-				sim:warpUnit( newUnit, sim:getCell(x1, y1) )
+				
+				sim:dispatchEvent( simdefs.EV_UNIT_THROW, { unit = userUnit, x1=x1, y1=y1, facing=facing } )
+
+				if x0 ~= targetCell.x or y0 ~= targetCell.y then
+					sim:warpUnit(newUnit, sim:getCell(x1, y1))
+				end
+
+				newUnit:getTraits().throwingUnit = player:getID()
+				newUnit:getTraits().cooldown = newUnit:getTraits().cooldownMax
+
 				newUnit:activate()
 
-				sim:emitSound( simdefs.SOUND_ITEM_PUTDOWN, cell.x, cell.y, userUnit)
-			sim:emitSound( simdefs.SOUND_PRIME_EMP, cell.x, cell.y, userUnit)
-			
-			--self.abilityOwner = userUnit
-			--sim:addTrigger( simdefs.TRG_UNIT_WARP, self )
-			
-			
-
-			sim:dispatchEvent( simdefs.EV_UNIT_REFRESH, { unit = newUnit} ) 
-
-			--if newUnit:getTraits().trigger_mainframe then
-				--newUnit:getTraits().mainframe_item = true
-				newUnit:getTraits().mainframe_status = "on"
-				--newUnit:getTraits().isWidowMine = true
-				newUnit:setPlayerOwner( userUnit:getPlayerOwner() )
-			--end
+				if newUnit:getTraits().keepPathing == false and player:getBrain() then
+					player:useMP(player:getMP(), sim)
+				end
 				
-				userUnit:resetAllAiming()
-
-			inventory.useItem( sim, userUnit, grenadeUnit )
-
-				sim:dispatchEvent( simdefs.EV_UNIT_STOP_THROW, { unitID = userUnit:getID(), x1=x1, y1=y1, facing=facing } )
-			-- sim:addTrigger( simdefs.TRG_UNIT_WARP, self)
-
-				sim:processReactions( userUnit )
+				sim:processReactions()
+				
+				grenadeUnit:getTraits().ammo = grenadeUnit:getTraits().ammo - 1
+				
 			end
 			userUnit:getTraits().throwing = nil
 			if userUnit:isValid() and not userUnit:getTraits().interrupted then
 				simquery.suggestAgentFacing(userUnit, facing)
 			end
 
-			
-			
 		end,
 	}
 
