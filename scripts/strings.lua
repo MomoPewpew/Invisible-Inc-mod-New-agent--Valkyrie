@@ -33,7 +33,7 @@ local MOD_STRINGS =
 		ITEM_CAMERA_LAUNCHER_DESC = "Launch a compact Blackeye Camera at a location that you can see, providing 360 degree vision in an area. Blackeye Cameras can not be recovered. \nThe camera launcher cannot be reloaded manually, but is automatically reloaded at the start of each mission.",
 		ITEM_CAMERA_LAUNCHER_FLAV = "Experimental disposable surveillance tools that can be placed from a distance to quickly establish surveillance in a hostile area of operation. \nThe battery life is limited and the propelling mechanism is single-use, so these cameras can not be recovered once launched.",
 		ITEM_BLACKEYE = "Blackeye Camera",
-		ITEM_BLACKEYE_DESCR = "Surveillance equipment that was deployed by a Camera Launcher. This camera can not be recovered."
+		ITEM_BLACKEYE_DESC = "Surveillance equipment that was deployed by a Camera Launcher. This camera can not be recovered. \nIf a guard sees this camera, they will destroy it and start hunting."
 	},
 	ABILITIES =
 	{

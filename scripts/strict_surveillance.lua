@@ -16,10 +16,12 @@ local strict_surveillance =
 	onSpawnAbility = function( self, sim, unit )
 		self.abilityOwner = unit
 		sim:addTrigger( simdefs.TRG_START_TURN, self )
+		sim:addTrigger( simdefs.EV_UNIT_THROW, self )
 	end,
 		
 	onDespawnAbility = function( self, sim, unit )
 		sim:removeTrigger( simdefs.TRG_START_TURN, self )
+		sim:removeTrigger( simdefs.EV_UNIT_THROW, self )
 		self.abilityOwner = nil
 	end,
 	
@@ -71,22 +73,38 @@ local strict_surveillance =
 	end,
 	
 	onTrigger = function( self, sim, evType, evData )
-		if self.abilityOwner and evData and evData:isPC() and not self.abilityOwner:isKO() then
-            userUnit = self.abilityOwner:getUnitOwner()
-			local x0,y0 = userUnit:getLocation()
-			if x0 and y0 then
-				for _, deployedCamera in pairs(sim:getAllUnits()) do
-					if deployedCamera:getTraits().doAutoMarking then
-						local x1, y1 = deployedCamera:getLocation()
-						if x1 and y1 then
-							for _, unit in pairs( sim:getAllUnits() ) do
-								if sim:canUnitSeeUnit( deployedCamera, unit ) and not unit:getTraits().noObserve and unit:getPather() and not unit:getTraits().patrolObserved and simquery.isEnemyTarget( userUnit:getPlayerOwner(), unit ) and not (unit:isKO() or unit:isDead()) then
-									unit:getTraits().patrolObserved = true
-									self:createObserveTab( unit )
-									sim:dispatchEvent( simdefs.EV_UNIT_OBSERVED, unit )
-									self.abilityOwner:getPlayerOwner():glimpseUnit( sim, unit:getID() )
+		if evType == simdefs.TRG_START_TURN then
+			if self.abilityOwner and evData and evData:isPC() and not self.abilityOwner:isKO() then
+				userUnit = self.abilityOwner:getUnitOwner()
+				local x0,y0 = userUnit:getLocation()
+				if x0 and y0 then
+					for _, deployedCamera in pairs(sim:getAllUnits()) do
+						if deployedCamera:getTraits().doAutoMarking then
+							local x1, y1 = deployedCamera:getLocation()
+							if x1 and y1 then
+								for _, unit in pairs( sim:getAllUnits() ) do
+									if sim:canUnitSeeUnit( deployedCamera, unit ) and not unit:getTraits().noObserve and unit:getPather() and not unit:getTraits().patrolObserved and simquery.isEnemyTarget( userUnit:getPlayerOwner(), unit ) and not (unit:isKO() or unit:isDead()) then
+										unit:getTraits().patrolObserved = true
+										self:createObserveTab( unit )
+										sim:dispatchEvent( simdefs.EV_UNIT_OBSERVED, unit )
+										self.abilityOwner:getPlayerOwner():glimpseUnit( sim, unit:getID() )
+									end
 								end
 							end
+						end
+					end
+				end
+			end
+		end
+		
+		if evType == simdefs.EV_UNIT_THROW then
+			if self.abilityOwner and evData then
+				for _, unit in pairs( sim:getAllUnits() ) do
+					if unit:getTraits().throwingUnit and unit:getTraits().throwingUnit > 0 then
+						local throwingUnit = sim:getUnit( unit:getTraits().throwingUnit )
+						if throwingUnit and throwingUnit:countAugments( "valkyrie_augment_strict_surveillance" ) > 0 and unit:getTraits().camera then
+							unit:getTraits().hasHearing = true
+							unit:getTraits().doAutoMarking = true
 						end
 					end
 				end
