@@ -46,6 +46,7 @@ local tool_templates =
 	item_blackeye_camera = util.extend( commondefs.item_template )
 	{
 		type = "simgrenade",
+		rig = "grenaderig",
 		--icon = "itemrigs/FloorProp_MotionDetector.png",
 		name =  STRINGS.MOD_VALKYRIE.ITEMS.ITEM_BLACKEYE,
 		desc =  STRINGS.MOD_VALKYRIE.ITEMS.ITEM_BLACKEYE_DESC,
