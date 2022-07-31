@@ -102,8 +102,9 @@ local throw_camera_launcher =
 			local cell = sim:getCell( userUnit:getLocation() )
 			userUnit:getTraits().throwing = true
 		
-			local facing = simquery.getDirectionFromDelta(x1-x0, y1-y0)
-			simquery.suggestAgentFacing(userUnit, facing)
+			local oldFacing = userUnit:getFacing()
+			local newFacing = simquery.getDirectionFromDelta(x1-x0, y1-y0)
+			simquery.suggestAgentFacing(userUnit, newFacing)
 			if userUnit:getBrain() then	
 				if grenadeUnit:getTraits().baseDamage then
 					sim:emitSpeech(userUnit, speechdefs.HUNT_GRENADE)
@@ -113,7 +114,7 @@ local throw_camera_launcher =
 			end
 
 			if userUnit:isValid() and not userUnit:getTraits().interrupted then
-				sim:dispatchEvent( simdefs.EV_UNIT_THROW, { unit = userUnit, x1=x1, y1=y1, facing=facing } )
+				--sim:dispatchEvent( simdefs.EV_UNIT_THROW, { unit = userUnit, x1=x1, y1=y1, facing=newFacing } )
 
 				local newUnit = nil
 				local player = userUnit:getPlayerOwner()
@@ -128,6 +129,14 @@ local throw_camera_launcher =
 				
 				sim:dispatchEvent( simdefs.EV_UNIT_THROWN, { unit = newUnit, x=x1, y1 } )
 				
+				local pinning, pinnee = simquery.isUnitPinning(userUnit:getSim(), userUnit)
+				sim:dispatchEvent( simdefs.EV_UNIT_START_SHOOTING, { unitID = userUnit:getID(), newFacing=newFacing, oldFacing=oldFacing,targetUnitID = userUnit:getID(), pinning=pinning } )
+				
+				if userUnit:countAugments( "valkyrie_augment_strict_surveillance" ) > 0 then
+					newUnit:getTraits().hasHearing = true
+					newUnit:getTraits().doAutoMarking = true
+				end
+				
 				sim:spawnUnit( newUnit )
 
 				if x0 ~= targetCell.x or y0 ~= targetCell.y then
@@ -137,8 +146,10 @@ local throw_camera_launcher =
 				newUnit:getTraits().throwingUnit = player:getID()
 				newUnit:getTraits().cooldown = newUnit:getTraits().cooldownMax
 
-				newUnit:activate()
+				sim:dispatchEvent( simdefs.EV_UNIT_STOP_SHOOTING, { unitID = userUnit:getID(), facing=newFacing, pinning=pinning} )	
 
+				newUnit:activate()
+				
 				if newUnit:getTraits().keepPathing == false and player:getBrain() then
 					player:useMP(player:getMP(), sim)
 				end
@@ -150,7 +161,7 @@ local throw_camera_launcher =
 			end
 			userUnit:getTraits().throwing = nil
 			if userUnit:isValid() and not userUnit:getTraits().interrupted then
-				simquery.suggestAgentFacing(userUnit, facing)
+				simquery.suggestAgentFacing(userUnit, newFacing)
 			end
 
 		end,
