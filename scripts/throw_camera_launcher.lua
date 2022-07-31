@@ -129,6 +129,11 @@ local throw_camera_launcher =
 				
 				sim:dispatchEvent( simdefs.EV_UNIT_THROWN, { unit = newUnit, x=x1, y1 } )
 				
+				local oldWeapon = simquery.getEquippedGun( userUnit )
+				grenadeUnit:getTraits().slot = "gun"
+				inventory.equipItem( userUnit, grenadeUnit )
+				sim:dispatchEvent( simdefs.EV_UNIT_REFRESH, { unit = userUnit } )
+				
 				local pinning, pinnee = simquery.isUnitPinning(userUnit:getSim(), userUnit)
 				sim:dispatchEvent( simdefs.EV_UNIT_START_SHOOTING, { unitID = userUnit:getID(), newFacing=newFacing, oldFacing=oldFacing,targetUnitID = userUnit:getID(), pinning=pinning } )
 				
@@ -137,6 +142,7 @@ local throw_camera_launcher =
 					newUnit:getTraits().doAutoMarking = true
 				end
 				
+				sim:dispatchEvent( simdefs.EV_PLAY_SOUND, {sound="SpySociety/Weapons/LowBore/shoot_handgun_silenced", x=x0,y=y0} )
 				sim:spawnUnit( newUnit )
 
 				if x0 ~= targetCell.x or y0 ~= targetCell.y then
@@ -144,8 +150,17 @@ local throw_camera_launcher =
 				end
 
 				newUnit:getTraits().throwingUnit = player:getID()
-				newUnit:getTraits().cooldown = newUnit:getTraits().cooldownMax
-
+				
+				inventory.unequipItem( userUnit, grenadeUnit )
+				grenadeUnit:getTraits().slot = nil
+				
+				if (oldWeapon) then
+					inventory.equipItem( userUnit, oldWeapon )
+					oldWeapon = nil
+				end
+				
+				sim:dispatchEvent( simdefs.EV_UNIT_REFRESH, { unit = userUnit } )
+				
 				sim:dispatchEvent( simdefs.EV_UNIT_STOP_SHOOTING, { unitID = userUnit:getID(), facing=newFacing, pinning=pinning} )	
 
 				newUnit:activate()
