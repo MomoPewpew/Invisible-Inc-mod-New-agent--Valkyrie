@@ -14,45 +14,6 @@ local itemdefs = include("sim/unitdefs/itemdefs")
 local guarddefs = include("sim/unitdefs/guarddefs")
 local propdefs = include("sim/unitdefs/propdefs")
 
--------------------------------------------------------------
--- Stolen from cloak tooltip for showing range - may work with later
-
-local camera_launcher_throw_tooltip = class( abilityutil.hotkey_tooltip )
-
-function camera_launcher_throw_tooltip:init( hud, unit, range, ... )
-	abilityutil.hotkey_tooltip.init( self, ... )
-	self._game = hud._game
-	self._unit = unit
-	self._range = range
-    if range then
-        local x0, y0 = unit:getLocation() 
-        self._targets = getTargetUnits( hud._game.simCore, unit, x0, y0, range)
-    end
-end
-
-function camera_launcher_throw_tooltip:activate( screen )
-	abilityutil.hotkey_tooltip.activate( self, screen )
-	if self._range then
-		local x0, y0 = self._unit:getLocation()
-		local coords = simquery.rasterCircle( self._game.simCore, x0, y0, self._range )
-		self._hiliteID = self._game.boardRig:hiliteCells( coords, cdefs.HILITE_TARGET_COLOR )
-        for i, target in ipairs( self._targets ) do
-            self._game.boardRig:getUnitRig( target:getID() ):getProp():setRenderFilter( cdefs.RENDER_FILTERS["focus_target"] )
-        end
-	end
-end
-
-function camera_launcher_throw_tooltip:deactivate()
-	abilityutil.hotkey_tooltip.deactivate( self )
-	if self._range then
-		self._game.boardRig:unhiliteCells( self._hiliteID )	
-		self._hiliteID = nil
-        for i, target in ipairs( self._targets ) do
-            self._game.boardRig:getUnitRig( target:getID() ):refreshRenderFilter()
-        end
-	end
-end
-
 local throw_camera_launcher =
 	{
 		name = STRINGS.ABILITIES.THROW,
