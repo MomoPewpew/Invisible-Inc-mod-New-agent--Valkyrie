@@ -2,7 +2,7 @@ local MOD_STRINGS =
 {
 	OPTIONS =
 	{
-		OF_RESCUABLE = "VALKYRIE RESUABLE",
+		OF_RESCUABLE = "VALKYRIE RESCUABLE",
 		OF_RESCUABLE_DESC = "Whether On-File Valkyrie can be rescued from a Detention Center",
 	},
 	AGENTS =
