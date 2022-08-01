@@ -34,6 +34,7 @@ local tool_templates =
 			ammo = 3,
 			maxAmmo = 3,
 			noReload = true,
+			baseDamage = 0,
 		},
 		abilities = { "carryable", "throw_camera_launcher", },
 		value = 600,

@@ -122,12 +122,6 @@ local throw_camera_launcher =
 				newUnit = simfactory.createUnit( itemdefs.item_blackeye_camera, sim )
 
 				local x0, y0 = userUnit:getLocation()
-
-				assert( player )
-				newUnit:setPlayerOwner(player)
-				newUnit:getTraits().throwingUnit = userUnit:getID()
-				
-				sim:dispatchEvent( simdefs.EV_UNIT_THROWN, { unit = newUnit, x=x1, y1 } )
 				
 				local oldWeapon = simquery.getEquippedGun( userUnit )
 				grenadeUnit:getTraits().slot = "gun"
@@ -135,7 +129,7 @@ local throw_camera_launcher =
 				sim:dispatchEvent( simdefs.EV_UNIT_REFRESH, { unit = userUnit } )
 				
 				local pinning, pinnee = simquery.isUnitPinning(userUnit:getSim(), userUnit)
-				sim:dispatchEvent( simdefs.EV_UNIT_START_SHOOTING, { unitID = userUnit:getID(), newFacing=newFacing, oldFacing=oldFacing,targetUnitID = userUnit:getID(), pinning=pinning } )
+				sim:dispatchEvent( simdefs.EV_UNIT_START_SHOOTING, { unitID = userUnit:getID(), newFacing=newFacing, oldFacing=oldFacing,targetUnitID = newUnit:getID(), pinning=pinning } )
 
 				local dmgt = abilityutil.createShotDamage( grenadeUnit, userUnit )
 				local evData = { unitID = userUnit:getID(), x0 = x0, y0 = y0, x1=x1, y1=y1, dmgt = dmgt } 	
@@ -147,14 +141,21 @@ local throw_camera_launcher =
 					newUnit:getTraits().doAutoMarking = true
 				end
 				
-				sim:dispatchEvent( simdefs.EV_PLAY_SOUND, {sound="SpySociety/Weapons/LowBore/shoot_handgun_silenced", x=x0,y=y0} )
+				--sim:dispatchEvent( simdefs.EV_PLAY_SOUND, {sound="SpySociety/Weapons/LowBore/shoot_handgun_silenced", x=x0,y=y0} )
 				sim:spawnUnit( newUnit )
+				sim:warpUnit(newUnit, sim:getCell(x0, y0))
+				
+				assert( player )
+				newUnit:setPlayerOwner(player)
+				sim:dispatchEvent( simdefs.EV_UNIT_THROWN, { unit = newUnit, x=x1, y=y1 } )
 
-				if x0 ~= targetCell.x or y0 ~= targetCell.y then
+				if x0 ~= x1 or y0 ~= y1 then
 					sim:warpUnit(newUnit, sim:getCell(x1, y1))
 				end
-
-				newUnit:getTraits().throwingUnit = player:getID()
+				
+				newUnit:getTraits().throwingUnit = userUnit:getID()
+				
+				newUnit:activate()
 				
 				inventory.unequipItem( userUnit, grenadeUnit )
 				grenadeUnit:getTraits().slot = nil
@@ -165,10 +166,7 @@ local throw_camera_launcher =
 				end
 				
 				sim:dispatchEvent( simdefs.EV_UNIT_REFRESH, { unit = userUnit } )
-				
 				sim:dispatchEvent( simdefs.EV_UNIT_STOP_SHOOTING, { unitID = userUnit:getID(), facing=newFacing, pinning=pinning} )	
-
-				newUnit:activate()
 				
 				if newUnit:getTraits().keepPathing == false and player:getBrain() then
 					player:useMP(player:getMP(), sim)
