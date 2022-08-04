@@ -129,7 +129,8 @@ local throw_camera_launcher =
 				sim:dispatchEvent( simdefs.EV_UNIT_REFRESH, { unit = userUnit } )
 				
 				local pinning, pinnee = simquery.isUnitPinning(userUnit:getSim(), userUnit)
-				sim:dispatchEvent( simdefs.EV_UNIT_START_SHOOTING, { unitID = userUnit:getID(), newFacing=newFacing, oldFacing=oldFacing,targetUnitID = newUnit:getID(), pinning=pinning } )
+				
+				sim:dispatchEvent( simdefs.EV_UNIT_START_SHOOTING, { unitID = userUnit:getID(), newFacing=newFacing, oldFacing=oldFacing, pinning=pinning } )
 
 				local dmgt = abilityutil.createShotDamage( grenadeUnit, userUnit )
 				local evData = { unitID = userUnit:getID(), x0 = x0, y0 = y0, x1=x1, y1=y1, dmgt = dmgt } 	
