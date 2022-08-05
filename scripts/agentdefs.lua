@@ -44,12 +44,12 @@ local agent_templates =
 		toolTip = STRINGS.MOD_VALKYRIE.AGENTS.VALKYRIE.ALT_1.TOOLTIP,
 		onWorldTooltip = commondefs.onAgentTooltip,
 		
-		profile_icon_36x36= "gui/profile_icons/lady_sharpshooter_36.png",
-		profile_icon_64x64= "gui/profile_icons/nika_64x64.png",
-		splash_image = "gui/agents/nika_1024.png",
+		profile_icon_36x36= "gui/profile_icons/valkyrie_32.png",
+		profile_icon_64x64= "gui/profile_icons/valkyrie_64.png",
+		splash_image = "gui/agents/valkyrie_1024.png",
 		profile_anim = "portraits/lady_sharpshooter_face",	
 		team_select_img = {
-			"gui/agents/team_select_1_nika.png"
+			"gui/agents/valkyrie_256.png"
 		},
 		
 		kanim = "kanim_female_sharpshooter_2",

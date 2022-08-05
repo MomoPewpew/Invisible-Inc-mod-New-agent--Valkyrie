@@ -12,8 +12,11 @@ local function initStrings( modApi )
 end
 
 local function load( modApi, options, params, mod_options )
+	local dataPath = modApi:getDataPath()
 	local scriptPath = modApi:getScriptPath()
 	
+	KLEIResourceMgr.MountPackage( dataPath .. "/gui.kwad", "data" )
+
    if options["OF_RESCUABLE"].enabled then
        local agentdefs = include( scriptPath .. "/agentdefs" )
        for name, agentDef in pairs(agentdefs) do
