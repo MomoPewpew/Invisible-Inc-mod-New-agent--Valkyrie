@@ -1,0 +1,76 @@
+<Build name="valkyrie_face.fla">
+  <Symbol name="arm">
+    <Frame framenum="0" duration="1" image="arm-0-1" w="204" h="392" x="0.00050354" y="-0.5245056" />
+  </Symbol>
+  <Symbol name="hair_front">
+    <Frame framenum="0" duration="1" image="hair_front-0-1" w="196" h="156" x="1.275497" y="-0.02449799" />
+  </Symbol>
+  <Symbol name="ear">
+    <Frame framenum="0" duration="1" image="ear-0-1" w="48" h="76" x="0.0004997253" y="-0.4995003" />
+  </Symbol>
+  <Symbol name="hair_side">
+    <Frame framenum="0" duration="1" image="hair_side-0-1" w="112" h="136" x="0.9005013" y="-9.224503" />
+  </Symbol>
+  <Symbol name="nose">
+    <Frame framenum="0" duration="1" image="nose-0-1" w="60" h="116" x="-0.5244999" y="-0.3995018" />
+  </Symbol>
+  <Symbol name="eye_r">
+    <Frame framenum="0" duration="1" image="eye_r-0-1" w="68" h="52" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="1" duration="1" image="eye_r-1-1" w="64" h="52" x="-0.7994995" y="-0.02449989" />
+    <Frame framenum="2" duration="1" image="eye_r-2-1" w="64" h="52" x="-1.1745" y="-0.02449989" />
+    <Frame framenum="3" duration="1" image="eye_r-3-1" w="64" h="52" x="-1.349499" y="-0.02449989" />
+    <Frame framenum="4" duration="1" image="eye_r-3-1" w="64" h="52" x="-1.349499" y="-0.02449989" />
+    <Frame framenum="5" duration="1" image="eye_r-2-1" w="64" h="52" x="-1.1745" y="-0.02449989" />
+    <Frame framenum="6" duration="1" image="eye_r-1-1" w="64" h="52" x="-0.7994995" y="-0.02449989" />
+    <Frame framenum="7" duration="1" image="eye_r-0-1" w="68" h="52" x="0.0004997253" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="eye_l">
+    <Frame framenum="0" duration="1" image="eye_l-0-1" w="76" h="56" x="0.0004997253" y="0.0004997253" />
+    <Frame framenum="1" duration="1" image="eye_l-1-1" w="76" h="56" x="-0.2745018" y="0.0004997253" />
+    <Frame framenum="2" duration="1" image="eye_l-2-1" w="80" h="56" x="-1.4245" y="0.0004997253" />
+    <Frame framenum="3" duration="1" image="eye_l-3-1" w="80" h="56" x="-1.4245" y="0.0004997253" />
+    <Frame framenum="4" duration="1" image="eye_l-3-1" w="80" h="56" x="-1.4245" y="0.0004997253" />
+    <Frame framenum="5" duration="1" image="eye_l-2-1" w="80" h="56" x="-1.4245" y="0.0004997253" />
+    <Frame framenum="6" duration="1" image="eye_l-6-1" w="76" h="56" x="-0.2745018" y="0.0004997253" />
+    <Frame framenum="7" duration="1" image="eye_l-0-1" w="76" h="56" x="0.0004997253" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="mouth">
+    <Frame framenum="0" duration="1" image="mouth-0-1" w="88" h="52" x="0.02550125" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="eyebrow_l">
+    <Frame framenum="0" duration="1" image="eyebrow_l-0-1" w="88" h="48" x="0.0004997253" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="eyebrow_r">
+    <Frame framenum="0" duration="1" image="eyebrow_r-0-1" w="60" h="32" x="0.02549934" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="eyeball2">
+    <Frame framenum="0" duration="1" image="eyeball2-0-1" w="32" h="28" x="0.0255003" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="eyeball">
+    <Frame framenum="0" duration="1" image="eyeball-0-1" w="36" h="32" x="0.02549934" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="eyewhite_2">
+    <Frame framenum="0" duration="1" image="eyewhite_2-0-1" w="56" h="44" x="0.0004997253" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="eyewhite_1">
+    <Frame framenum="0" duration="1" image="eyewhite_1-0-1" w="64" h="52" x="0.02549934" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="head_top">
+    <Frame framenum="0" duration="1" image="head_top-0-1" w="212" h="172" x="0.00050354" y="-0.5995026" />
+  </Symbol>
+  <Symbol name="chin">
+    <Frame framenum="0" duration="1" image="chin-0-1" w="220" h="228" x="0.00050354" y="-0.02449799" />
+  </Symbol>
+  <Symbol name="neck">
+    <Frame framenum="0" duration="1" image="neck-0-1" w="152" h="260" x="0.00050354" y="0.00050354" />
+  </Symbol>
+  <Symbol name="chest">
+    <Frame framenum="0" duration="1" image="chest-0-1" w="452" h="432" x="-0.02450562" y="-7.249496" />
+  </Symbol>
+  <Symbol name="hair_back_2">
+    <Frame framenum="0" duration="1" image="hair_back_2-0-1" w="216" h="468" x="1.400497" y="0.00050354" />
+  </Symbol>
+  <Symbol name="hair_back">
+    <Frame framenum="0" duration="1" image="hair_back-0-1" w="248" h="428" x="-0.02449799" y="-0.02450562" />
+  </Symbol>
+</Build>

@@ -47,11 +47,11 @@ local agent_templates =
 		profile_icon_36x36= "gui/profile_icons/valkyrie_32.png",
 		profile_icon_64x64= "gui/profile_icons/valkyrie_64.png",
 		splash_image = "gui/agents/valkyrie_1024.png",
-		profile_anim = "portraits/lady_sharpshooter_face",	
-		team_select_img = {
-			"gui/agents/valkyrie_256.png"
-		},
+
+		team_select_img = { "gui/agents/valkyrie_256.png" },
 		
+		profile_anim = "portraits/lady_sharpshooter_face",	
+		profile_build = "portraits/valkyrie_face",
 		kanim = "kanim_female_sharpshooter_2",
 		hireText =  STRINGS.MOD_VALKYRIE.AGENTS.VALKYRIE.RESCUED,
 		traits = util.extend( commondefs.DEFAULT_AGENT_TRAITS ) { mp=8, mpMax =8, },
