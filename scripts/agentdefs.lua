@@ -52,7 +52,7 @@ local agent_templates =
 		
 		profile_anim = "portraits/lady_sharpshooter_face",	
 		profile_build = "portraits/valkyrie_face",
-		kanim = "kanim_female_sharpshooter_2",
+		kanim = "kanim_valkyrie",
 		hireText =  STRINGS.MOD_VALKYRIE.AGENTS.VALKYRIE.RESCUED,
 		traits = util.extend( commondefs.DEFAULT_AGENT_TRAITS ) { mp=8, mpMax =8, },
 		skills = util.extend( commondefs.DEFAULT_AGENT_SKILLS ) {}, 

@@ -22,11 +22,17 @@ local function load( modApi, options, params, mod_options )
 		for name, agentDef in pairs(agentdefs) do
 			modApi:addAgentDef( name, agentDef, { name } )
 		end
+
 		local serverdefs = include( scriptPath .. "/serverdefs" )
 		if serverdefs.TEMPLATE_AGENCY and serverdefs.TEMPLATE_AGENCY.unitDefsPotential then
 			for i,unitDef in ipairs(serverdefs.TEMPLATE_AGENCY.unitDefsPotential) do
 				modApi:addRescueAgent( unitDef )
 			end
+		end
+
+		local animdefs = include( scriptPath .. "/animdefs" )
+		for name, animDef in pairs(animdefs) do
+			modApi:addAnimDef( name, animDef )
 		end
 
 		local itemdefs = include( scriptPath .. "/itemdefs" )
