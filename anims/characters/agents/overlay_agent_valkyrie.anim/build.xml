@@ -1,4 +1,4 @@
-<Build name="overlay_agent_nika.fla">
+<Build name="overlay_agent_valkyrie.fla">
   <Symbol name="bang_clr_00">
     <Frame framenum="0" duration="1" image="bang_clr_00-0-1" w="32" h="32" x="0.2755003" y="-12.974" />
     <Frame framenum="1" duration="1" image="bang_clr_00-1-1" w="36" h="36" x="-1.724501" y="-10.599" />
@@ -30,8 +30,8 @@
   </Symbol>
   <Symbol name="har_clr_00">
     <Frame framenum="0" duration="1" image="har_clr_00-0-1" w="32" h="44" x="-0.1744995" y="12.3005" />
-    <Frame framenum="1" duration="1" image="har_clr_00-1-1" w="28" h="46" x="-1.7245" y="13.8505" />
-    <Frame framenum="2" duration="1" image="har_clr_00-2-1" w="28" h="46" x="-0.6995001" y="14.9255" />
+    <Frame framenum="1" duration="1" image="har_clr_00-1-1" w="28" h="44" x="-1.7245" y="12.8505" />
+    <Frame framenum="2" duration="1" image="har_clr_00-2-1" w="28" h="44" x="-0.6995001" y="13.9255" />
     <Frame framenum="3" duration="1" image="har_clr_00-3-1" w="32" h="44" x="-1.2495" y="13.8755" />
   </Symbol>
   <Symbol name="cst_clr_00">
@@ -66,7 +66,7 @@
     <Frame framenum="16" duration="1" image="her_clr_00-16-1" w="20" h="24" x="-0.3745003" y="4.3505" />
     <Frame framenum="17" duration="1" image="her_clr_00-17-1" w="24" h="24" x="-1.8745" y="2.4255" />
     <Frame framenum="18" duration="1" image="her_clr_00-18-1" w="20" h="28" x="0.1254997" y="4.6755" />
-    <Frame framenum="19" duration="1" image="her_clr_00-19-1" w="30" h="24" x="2.5505" y="1.1255" />
+    <Frame framenum="19" duration="1" image="her_clr_00-19-1" w="28" h="24" x="1.5505" y="1.1255" />
     <Frame framenum="20" duration="1" image="her_clr_00-20-1" w="24" h="24" x="2.4505" y="-0.1745005" />
     <Frame framenum="21" duration="1" image="her_clr_00-21-1" w="24" h="24" x="-0.2244997" y="0.1254997" />
     <Frame framenum="22" duration="1" image="her_clr_00-22-1" w="24" h="28" x="-2.2745" y="5.2505" />
@@ -79,22 +79,22 @@
     <Frame framenum="29" duration="1" image="her_clr_00-29-1" w="24" h="24" x="4.1255" y="4.1255" />
     <Frame framenum="30" duration="1" image="her_clr_00-30-1" w="24" h="24" x="1.0505" y="4.3755" />
     <Frame framenum="31" duration="1" image="her_clr_00-31-1" w="30" h="32" x="-4.099501" y="9.3755" />
-    <Frame framenum="32" duration="1" image="her_clr_00-32-1" w="38" h="38" x="-5.6245" y="7.150499" />
+    <Frame framenum="32" duration="1" image="her_clr_00-30-2" w="38" h="38" x="-5.6245" y="7.150499" />
   </Symbol>
   <Symbol name="aur_clr_00">
-    <Frame framenum="0" duration="1" image="aur_clr_00-0-1" w="20" h="42" x="1.2755" y="12.1505" />
+    <Frame framenum="0" duration="1" image="aur_clr_00-0-1" w="20" h="40" x="1.2755" y="11.1505" />
     <Frame framenum="1" duration="1" image="aur_clr_00-1-1" w="24" h="40" x="4.3005" y="12.8755" />
-    <Frame framenum="2" duration="1" image="aur_clr_00-2-1" w="28" h="54" x="6.5255" y="19.5505" />
+    <Frame framenum="2" duration="1" image="aur_clr_00-2-1" w="28" h="52" x="6.5255" y="18.5505" />
     <Frame framenum="3" duration="1" image="aur_clr_00-3-1" w="24" h="40" x="3.9505" y="13.5505" />
     <Frame framenum="4" duration="1" image="aur_clr_00-4-1" w="24" h="40" x="2.9255" y="13.8255" />
-    <Frame framenum="5" duration="1" image="aur_clr_00-5-1" w="24" h="42" x="1.4255" y="12.5005" />
+    <Frame framenum="5" duration="1" image="aur_clr_00-5-1" w="24" h="40" x="1.4255" y="11.5005" />
     <Frame framenum="6" duration="1" image="aur_clr_00-6-1" w="20" h="36" x="0.0255003" y="11.2005" />
     <Frame framenum="7" duration="1" image="aur_clr_00-7-1" w="24" h="40" x="0.6254997" y="13.1255" />
     <Frame framenum="8" duration="1" image="aur_clr_00-8-1" w="20" h="40" x="-1.6245" y="11.4755" />
     <Frame framenum="9" duration="1" image="aur_clr_00-9-1" w="24" h="40" x="-2.4745" y="12.9005" />
     <Frame framenum="10" duration="1" image="aur_clr_00-10-1" w="24" h="40" x="-2.6745" y="12.8755" />
-    <Frame framenum="11" duration="1" image="aur_clr_00-11-1" w="20" h="38" x="0.7005005" y="11.8755" />
-    <Frame framenum="12" duration="1" image="aur_clr_00-12-1" w="24" h="40" x="1.9505" y="10.1505" />
+    <Frame framenum="11" duration="1" image="aur_clr_00-11-1" w="20" h="36" x="0.7005005" y="10.8755" />
+    <Frame framenum="12" duration="1" image="aur_clr_00-12-1" w="24" h="42" x="1.9505" y="11.1505" />
   </Symbol>
   <Symbol name="nck_clr_00">
     <Frame framenum="0" duration="1" image="nck_clr_00-0-1" w="20" h="32" x="0.07549953" y="-7.599501" />
@@ -125,12 +125,12 @@
     <Frame framenum="3" duration="1" image="hip_clr_00-3-1" w="36" h="36" x="-1.8745" y="-3.1495" />
     <Frame framenum="4" duration="1" image="hip_clr_00-4-1" w="44" h="36" x="0.02549934" y="-1.199499" />
     <Frame framenum="5" duration="1" image="hip_clr_00-5-1" w="36" h="40" x="-1.4245" y="-3.699501" />
-    <Frame framenum="6" duration="1" image="hip_clr_00-6-1" w="34" h="36" x="2.4005" y="-1.224501" />
+    <Frame framenum="6" duration="1" image="hip_clr_00-6-1" w="32" h="36" x="1.4005" y="-1.224501" />
     <Frame framenum="7" duration="1" image="hip_clr_00-7-1" w="32" h="36" x="0.3004999" y="-2.1245" />
   </Symbol>
   <Symbol name="llr_clr_00">
     <Frame framenum="0" duration="1" image="llr_clr_00-0-1" w="20" h="44" x="0.8255005" y="15.6505" />
-    <Frame framenum="1" duration="1" image="llr_clr_00-1-1" w="20" h="44" x="1.1255" y="15.1505" />
+    <Frame framenum="1" duration="1" image="llr_clr_00-1-1" w="20" h="46" x="1.1255" y="16.1505" />
     <Frame framenum="2" duration="1" image="llr_clr_00-2-1" w="20" h="48" x="-1.0495" y="12.0255" />
     <Frame framenum="3" duration="1" image="llr_clr_00-3-1" w="20" h="44" x="1.4505" y="13.6005" />
     <Frame framenum="4" duration="1" image="llr_clr_00-4-1" w="24" h="48" x="-0.6245003" y="13.4005" />
@@ -144,7 +144,7 @@
     <Frame framenum="12" duration="1" image="llr_clr_00-12-1" w="20" h="28" x="-0.7495003" y="7.8255" />
     <Frame framenum="13" duration="1" image="llr_clr_00-13-1" w="24" h="40" x="-0.1745005" y="10.7505" />
     <Frame framenum="14" duration="1" image="llr_clr_00-14-1" w="20" h="40" x="-0.1245003" y="8.7755" />
-    <Frame framenum="15" duration="1" image="llr_clr_00-15-1" w="20" h="48" x="1.3005" y="13.2005" />
+    <Frame framenum="15" duration="1" image="llr_clr_00-15-1" w="20" h="50" x="1.3005" y="14.2005" />
     <Frame framenum="16" duration="1" image="llr_clr_00-16-1" w="20" h="32" x="-0.1245003" y="5.275499" />
     <Frame framenum="17" duration="1" image="llr_clr_00-17-1" w="20" h="32" x="-0.1245003" y="5.275499" />
     <Frame framenum="18" duration="1" image="llr_clr_00-18-1" w="20" h="32" x="-0.2994995" y="8.8005" />
@@ -162,7 +162,7 @@
     <Frame framenum="7" duration="1" image="lur_clr_00-7-1" w="28" h="52" x="-1.4495" y="14.0505" />
     <Frame framenum="8" duration="1" image="lur_clr_00-8-1" w="28" h="48" x="-0.02449989" y="15.2005" />
     <Frame framenum="9" duration="1" image="lur_clr_00-9-1" w="28" h="54" x="0.8255005" y="16.9755" />
-    <Frame framenum="10" duration="1" image="lur_clr_00-10-1" w="28" h="54" x="0.8505001" y="18.4255" />
+    <Frame framenum="10" duration="1" image="lur_clr_00-10-1" w="28" h="52" x="0.8505001" y="17.4255" />
     <Frame framenum="11" duration="1" image="lur_clr_00-11-1" w="28" h="48" x="1.6005" y="16.7755" />
     <Frame framenum="12" duration="1" image="lur_clr_00-12-1" w="24" h="48" x="0.9005003" y="17.7505" />
     <Frame framenum="13" duration="1" image="lur_clr_00-13-1" w="28" h="52" x="-2.9245" y="14.7505" />
@@ -178,8 +178,8 @@
     <Frame framenum="5" duration="1" image="ftr_clr_00-5-1" w="28" h="16" x="-6.2495" y="1.2505" />
     <Frame framenum="6" duration="1" image="ftr_clr_00-6-1" w="28" h="20" x="-5.5495" y="2.2755" />
     <Frame framenum="7" duration="1" image="ftr_clr_00-7-1" w="20" h="20" x="-2.7995" y="-0.5244999" />
-    <Frame framenum="8" duration="1" image="ftr_clr_00-8-1" w="20" h="24" x="-1.2995" y="1.2005" />
-    <Frame framenum="9" duration="1" image="ftr_clr_00-9-1" w="20" h="24" x="-1.2995" y="1.2005" />
+    <Frame framenum="8" duration="1" image="ftr_clr_00-8-1" w="20" h="26" x="-1.2995" y="2.2005" />
+    <Frame framenum="9" duration="1" image="ftr_clr_00-9-1" w="20" h="26" x="-1.2995" y="2.2005" />
     <Frame framenum="10" duration="1" image="ftr_clr_00-10-1" w="24" h="20" x="-4.1495" y="3.625" />
     <Frame framenum="11" duration="1" image="ftr_clr_00-11-1" w="32" h="20" x="-6.0245" y="3.025" />
     <Frame framenum="12" duration="1" image="ftr_clr_00-12-1" w="32" h="20" x="-6.0245" y="3.025" />
@@ -187,13 +187,13 @@
     <Frame framenum="14" duration="1" image="ftr_clr_00-14-1" w="28" h="20" x="-6.7745" y="-0.8745003" />
     <Frame framenum="15" duration="1" image="ftr_clr_00-15-1" w="32" h="20" x="-7.974501" y="0.5504999" />
     <Frame framenum="16" duration="1" image="ftr_clr_00-16-1" w="28" h="20" x="-5.0245" y="3.0505" />
-    <Frame framenum="17" duration="1" image="ftr_clr_00-17-1" w="20" h="28" x="0.4005003" y="5.8755" />
+    <Frame framenum="17" duration="1" image="ftr_clr_00-17-1" w="22" h="28" x="1.4005" y="5.8755" />
     <Frame framenum="18" duration="1" image="ftr_clr_00-18-1" w="24" h="28" x="-2.5245" y="5.8255" />
   </Symbol>
   <Symbol name="cotl_clr_00">
     <Frame framenum="0" duration="1" image="skt_clr_00-1" w="2" h="2" x="-32.7245" y="-2.375" />
     <Frame framenum="1" duration="1" image="skt_clr_00-1" w="2" h="2" x="-36.1495" y="-6.099501" />
-    <Frame framenum="2" duration="1" image="skt_clr_00-1" w="2" h="2" x="-30.7495" y="-5.400002" />
+    <Frame framenum="2" duration="1" image="skt_clr_00-1" w="2" h="2" x="-30.7495" y="-2.799999" />
     <Frame framenum="3" duration="1" image="skt_clr_00-1" w="2" h="2" x="-31.2245" y="3.299999" />
     <Frame framenum="4" duration="1" image="skt_clr_00-1" w="2" h="2" x="-29.5995" y="10.075" />
     <Frame framenum="5" duration="1" image="skt_clr_00-1" w="2" h="2" x="-33.2745" y="-1.025002" />
@@ -265,7 +265,7 @@
     <Frame framenum="71" duration="1" image="skt_clr_00-1" w="2" h="2" x="-23.3995" y="-14.4245" />
     <Frame framenum="72" duration="1" image="skt_clr_00-1" w="2" h="2" x="-24.0495" y="-19.3495" />
     <Frame framenum="73" duration="1" image="skt_clr_00-1" w="2" h="2" x="-21.5245" y="-13.3995" />
-    <Frame framenum="74" duration="1" image="skt_clr_00-1" w="2" h="2" x="-22.0745" y="-8.1495" />
+    <Frame framenum="74" duration="1" image="skt_clr_00-1" w="2" h="2" x="-22.0745" y="-8.1745" />
     <Frame framenum="75" duration="1" image="skt_clr_00-1" w="2" h="2" x="-22.2745" y="-13.7245" />
     <Frame framenum="76" duration="1" image="skt_clr_00-1" w="2" h="2" x="-16.9995" y="-13.4995" />
     <Frame framenum="77" duration="1" image="skt_clr_00-1" w="2" h="2" x="-16.5245" y="-9.599501" />
@@ -298,7 +298,7 @@
     <Frame framenum="104" duration="1" image="skt_clr_00-1" w="2" h="2" x="-32.5245" y="3.700001" />
     <Frame framenum="105" duration="1" image="skt_clr_00-1" w="2" h="2" x="-34.8495" y="11.35" />
     <Frame framenum="106" duration="1" image="skt_clr_00-1" w="2" h="2" x="-35.2495" y="20.475" />
-    <Frame framenum="107" duration="1" image="skt_clr_00-1" w="2" h="2" x="-35.9245" y="12.05" />
+    <Frame framenum="107" duration="1" image="skt_clr_00-1" w="2" h="2" x="-35.4245" y="12.05" />
   </Symbol>
   <Symbol name="med_clr_00">
     <Frame framenum="0" duration="1" image="skt_clr_00-1" w="2" h="2" x="-7.9495" y="-9.9245" />
@@ -309,7 +309,7 @@
     <Frame framenum="5" duration="1" image="skt_clr_00-1" w="2" h="2" x="-8.2745" y="-9.449499" />
     <Frame framenum="6" duration="1" image="skt_clr_00-1" w="2" h="2" x="-10.2995" y="-10.0245" />
     <Frame framenum="7" duration="1" image="skt_clr_00-1" w="2" h="2" x="-6.3995" y="-5.599501" />
-    <Frame framenum="8" duration="1" image="skt_clr_00-1" w="2" h="2" x="-10.9495" y="-8.0245" />
+    <Frame framenum="8" duration="1" image="skt_clr_00-1" w="2" h="2" x="-10.9495" y="-8.0495" />
     <Frame framenum="9" duration="1" image="skt_clr_00-1" w="2" h="2" x="-9.7245" y="-8.6495" />
     <Frame framenum="10" duration="1" image="skt_clr_00-1" w="2" h="2" x="-9.3745" y="-7.7745" />
     <Frame framenum="11" duration="1" image="skt_clr_00-1" w="2" h="2" x="-11.8495" y="-13.6495" />
@@ -324,8 +324,8 @@
     <Frame framenum="20" duration="1" image="skt_clr_00-1" w="2" h="2" x="-16.7245" y="-12.7245" />
     <Frame framenum="21" duration="1" image="skt_clr_00-1" w="2" h="2" x="-11.8995" y="-8.2745" />
     <Frame framenum="22" duration="1" image="skt_clr_00-1" w="2" h="2" x="-18.8995" y="-8.9495" />
-    <Frame framenum="23" duration="1" image="skt_clr_00-1" w="2" h="2" x="-14.8495" y="-7.9495" />
-    <Frame framenum="24" duration="1" image="skt_clr_00-1" w="2" h="2" x="-10.9495" y="-8.0245" />
+    <Frame framenum="23" duration="1" image="skt_clr_00-1" w="2" h="2" x="-14.7995" y="-7.9495" />
+    <Frame framenum="24" duration="1" image="skt_clr_00-1" w="2" h="2" x="-10.9495" y="-8.0495" />
   </Symbol>
   <Symbol name="tzr_clr_00">
     <Frame framenum="0" duration="1" image="tzr_clr_00-0-1" w="24" h="48" x="0.0255003" y="-7.0245" />
@@ -346,15 +346,15 @@
     <Frame framenum="4" duration="1" image="cmp_clr_01-4" w="76" h="40" x="-0.04949951" y="12.6005" />
   </Symbol>
   <Symbol name="srg_clr_00">
-    <Frame framenum="0" duration="1" image="srg_clr_00-0-1" w="52" h="20" x="-1.8995" y="-0.02449989" />
-    <Frame framenum="1" duration="1" image="srg_clr_00-1-1" w="52" h="20" x="-1.824499" y="-0.02449989" />
+    <Frame framenum="0" duration="1" image="srg_clr_00-0-1" w="54" h="20" x="-0.8994999" y="-0.02449989" />
+    <Frame framenum="1" duration="1" image="srg_clr_00-1-1" w="54" h="20" x="-0.8244991" y="-0.02449989" />
     <Frame framenum="2" duration="1" image="srg_clr_00-2-1" w="48" h="20" x="-2.6245" y="-0.02449989" />
     <Frame framenum="3" duration="1" image="srg_clr_00-3-1" w="32" h="20" x="8.1005" y="-0.02449989" />
-    <Frame framenum="4" duration="1" image="srg_clr_00-4-1" w="32" h="20" x="-10.3245" y="-0.02449989" />
+    <Frame framenum="4" duration="1" image="srg_clr_00-4-1" w="34" h="20" x="-9.324501" y="-0.02449989" />
     <Frame framenum="5" duration="1" image="srg_clr_00-5-1" w="28" h="20" x="9.125" y="-0.02449989" />
-    <Frame framenum="6" duration="1" image="srg_clr_00-6-1" w="36" h="20" x="-9.4245" y="-0.02449989" />
-    <Frame framenum="7" duration="1" image="srg_clr_00-7-1" w="86" h="28" x="15.8755" y="-3.474501" />
-    <Frame framenum="8" duration="1" image="srg_clr_00-8-1" w="52" h="26" x="19.95" y="-0.6744995" />
+    <Frame framenum="6" duration="1" image="srg_clr_00-6-1" w="38" h="20" x="-8.4245" y="-0.02449989" />
+    <Frame framenum="7" duration="1" image="srg_clr_00-7-1" w="88" h="28" x="16.8755" y="-3.474501" />
+    <Frame framenum="8" duration="1" image="srg_clr_00-8-1" w="52" h="24" x="19.95" y="-1.6745" />
     <Frame framenum="9" duration="1" image="srg_clr_00-9-1" w="28" h="20" x="7.725" y="-0.02449989" />
     <Frame framenum="10" duration="1" image="srg_clr_00-10-1" w="32" h="20" x="-10.2495" y="-0.02449989" />
   </Symbol>
