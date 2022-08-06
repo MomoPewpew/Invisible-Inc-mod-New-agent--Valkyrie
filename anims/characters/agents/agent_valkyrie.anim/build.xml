@@ -1,10 +1,10 @@
 <Build name="agent_valkyrie.fla">
   <Symbol name="bang_clr_00">
-    <Frame framenum="0" duration="1" image="bang_clr_00-0-1" w="32" h="32" x="0.2755003" y="-12.974" />
-    <Frame framenum="1" duration="1" image="bang_clr_00-1-1" w="36" h="36" x="-1.724501" y="-10.599" />
-    <Frame framenum="2" duration="1" image="bang_clr_00-2-1" w="36" h="32" x="-1.3745" y="-10.849" />
-    <Frame framenum="3" duration="1" image="bang_clr_00-3-1" w="36" h="36" x="-1.1745" y="-10.4495" />
-    <Frame framenum="4" duration="1" image="bang_clr_00-4-1" w="32" h="36" x="0.1254997" y="-9.9245" />
+    <Frame framenum="0" duration="1" image="bang_clr_00-0" w="32" h="40" x="-0.09950066" y="-8.8995" />
+    <Frame framenum="1" duration="1" image="bang_clr_00-1" w="32" h="42" x="-0.4995003" y="-6.2995" />
+    <Frame framenum="2" duration="1" image="bang_clr_00-2" w="32" h="40" x="-1.1745" y="-5.7495" />
+    <Frame framenum="3" duration="1" image="bang_clr_00-3" w="36" h="44" x="-2.724501" y="-6.449501" />
+    <Frame framenum="4" duration="1" image="bang_clr_00-4" w="36" h="42" x="-0.7245007" y="-6.074501" />
   </Symbol>
   <Symbol name="fac_clr_00">
     <Frame framenum="0" duration="1" image="fac_clr_00-0-1" w="28" h="40" x="0.1254997" y="-6.349501" />
@@ -29,10 +29,10 @@
     <Frame framenum="12" duration="1" image="alr_clr_00-12-1" w="24" h="28" x="0.5255003" y="2.6255" />
   </Symbol>
   <Symbol name="har_clr_00">
-    <Frame framenum="0" duration="1" image="har_clr_00-0-1" w="32" h="44" x="-0.1744995" y="12.3005" />
-    <Frame framenum="1" duration="1" image="har_clr_00-1-1" w="28" h="44" x="-1.7245" y="12.8505" />
-    <Frame framenum="2" duration="1" image="har_clr_00-2-1" w="28" h="44" x="-0.6995001" y="13.9255" />
-    <Frame framenum="3" duration="1" image="har_clr_00-3-1" w="32" h="44" x="-1.2495" y="13.8755" />
+    <Frame framenum="0" duration="1" image="har_clr_00-0" w="100" h="100" x="1.7505" y="10.7005" />
+    <Frame framenum="1" duration="1" image="har_clr_00-1" w="100" h="100" x="-1.8245" y="11.7505" />
+    <Frame framenum="2" duration="1" image="har_clr_00-2" w="100" h="100" x="-1.9495" y="13.1005" />
+    <Frame framenum="3" duration="1" image="har_clr_00-3" w="100" h="100" x="0.1254997" y="13.1005" />
   </Symbol>
   <Symbol name="cst_clr_00">
     <Frame framenum="0" duration="1" image="cst_clr_00-0-1" w="40" h="40" x="-0.2744999" y="-12.0995" />
