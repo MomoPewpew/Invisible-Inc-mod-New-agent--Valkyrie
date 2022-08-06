@@ -22,7 +22,7 @@ local animdefs =
 	{
 		wireframe =
 		{
-			"data/anims/characters/agents/overlay_agent_nika.abld",
+			"data/anims/characters/agents/overlay_agent_valkyrie.abld",
 		},
 		build = 
 		{ 			
