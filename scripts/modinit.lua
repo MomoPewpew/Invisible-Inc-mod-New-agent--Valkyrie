@@ -1,6 +1,9 @@
 local function init( modApi )
+	local scriptPath = modApi:getScriptPath()
+
 	modApi:addGenerationOption("OF_RESCUABLE", STRINGS.MOD_VALKYRIE.OPTIONS.OF_RESCUABLE, STRINGS.MOD_VALKYRIE.OPTIONS.OF_RESCUABLE_DESC, {noUpdate=true} )
 	modApi.requirements = {}
+	local itemGuardBehavior = include(scriptPath.."/itemGuardBehavior")
 end
 
 local function initStrings( modApi )
